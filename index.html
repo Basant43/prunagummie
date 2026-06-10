@@ -430,7 +430,64 @@
     font-size: 13px; color: var(--text-muted); line-height: 1.65;
   }
 
-  /* SECTION 5: MOTION GRAPHICS */
+  /* SECTION 5: SHOWCASE VIDEOS */
+  #showcase-videos { background: var(--bg3); }
+  .videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  .video-card {
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    position: relative;
+  }
+  .video-card:hover {
+    border-color: var(--gold-border);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(201,168,76,0.12);
+  }
+  .video-card video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 9/16;
+    object-fit: cover;
+    background: #000;
+  }
+  .video-card-info {
+    padding: 16px 20px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .video-card-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px; font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.3px;
+  }
+  .video-card-badge {
+    font-size: 10px; font-weight: 600; letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: var(--gold-dim);
+    border: 1px solid var(--gold-border);
+    border-radius: 99px;
+    padding: 3px 10px;
+  }
+  .video-card:hover .video-card-badge {
+    color: var(--emerald);
+    background: var(--emerald-dim);
+    border-color: var(--emerald-border);
+  }
+  .video-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(10,15,10,0.7) 0%, transparent 40%);
+    pointer-events: none;
+  }
+
+  /* SECTION 6: MOTION GRAPHICS */
   #motion-graphics { background: var(--bg2); }
   .motion-card {
     padding: 56px 48px;
@@ -638,6 +695,7 @@
     <li><a href="#thoughts">My Thoughts</a></li>
     <li><a href="#design-experience">Design Experience</a></li>
     <li><a href="#key-learnings">Key Learnings</a></li>
+    <li><a href="#showcase-videos">Showcase Videos</a></li>
     <li><a href="#motion-graphics">Motion Graphics</a></li>
     <li><a href="#personal-consideration">Personal</a></li>
     <li><a href="#conclusion">Conclusion</a></li>
@@ -651,6 +709,7 @@
   <a href="#thoughts" onclick="closeMenu()">My Thoughts</a>
   <a href="#design-experience" onclick="closeMenu()">Design Experience</a>
   <a href="#key-learnings" onclick="closeMenu()">Key Learnings</a>
+  <a href="#showcase-videos" onclick="closeMenu()">Showcase Videos</a>
   <a href="#motion-graphics" onclick="closeMenu()">Motion Graphics</a>
   <a href="#personal-consideration" onclick="closeMenu()">Personal</a>
   <a href="#conclusion" onclick="closeMenu()">Conclusion</a>
@@ -868,7 +927,74 @@
   </div>
 </section>
 
-<!-- SECTION 5: MOTION GRAPHICS -->
+<!-- SECTION 5: SHOWCASE VIDEOS -->
+<section id="showcase-videos">
+  <div class="section-container">
+    <div class="section-label reveal">Showcase</div>
+    <h2 class="section-title reveal reveal-delay-1">Video Showcase</h2>
+    <p class="section-desc reveal reveal-delay-2">A curated collection of video creatives produced during the consideration period — reflecting brand storytelling, product aesthetics, and motion-driven content.</p>
+    <div class="videos-grid">
+
+      <div class="glass-card video-card reveal reveal-delay-1">
+        <video controls preload="metadata" poster="">
+          <source src="Youthful.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+        <div class="video-card-info">
+          <div class="video-card-title">Youthful</div>
+          <span class="video-card-badge">Campaign</span>
+        </div>
+      </div>
+
+      <div class="glass-card video-card reveal reveal-delay-2">
+        <video controls preload="metadata" poster="">
+          <source src="Preety_Women.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+        <div class="video-card-info">
+          <div class="video-card-title">Pretty Women</div>
+          <span class="video-card-badge">Creative</span>
+        </div>
+      </div>
+
+      <div class="glass-card video-card reveal reveal-delay-3">
+        <video controls preload="metadata" poster="">
+          <source src="Preety_Women_2.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+        <div class="video-card-info">
+          <div class="video-card-title">Pretty Women 2</div>
+          <span class="video-card-badge">Creative</span>
+        </div>
+      </div>
+
+      <div class="glass-card video-card reveal reveal-delay-4">
+        <video controls preload="metadata" poster="">
+          <source src="Nivea_Soft.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+        <div class="video-card-info">
+          <div class="video-card-title">Nivea Soft</div>
+          <span class="video-card-badge">Brand</span>
+        </div>
+      </div>
+
+      <div class="glass-card video-card reveal reveal-delay-5">
+        <video controls preload="metadata" poster="">
+          <source src="Water_Girl.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+        <div class="video-card-info">
+          <div class="video-card-title">Water Girl</div>
+          <span class="video-card-badge">Lifestyle</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: MOTION GRAPHICS -->
 <section id="motion-graphics">
   <div class="section-container">
     <div class="section-label reveal">Motion Graphics</div>
