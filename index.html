@@ -430,159 +430,115 @@
     font-size: 13px; color: var(--text-muted); line-height: 1.65;
   }
 
-  /* SECTION 5: MOTION GRAPHICS */
-  #motion-graphics { background: var(--bg2); }
-  .motion-card {
-    padding: 56px 48px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: center;
-    position: relative; overflow: hidden;
-  }
-  .motion-card::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse 60% 80% at 0% 50%, rgba(201,168,76,0.05) 0%, transparent 60%);
-    pointer-events: none;
-  }
-  .motion-visual {
-    border-radius: var(--radius);
-    background: var(--bg3);
-    border: 1px solid var(--glass-border);
-    height: 200px;
-    display: flex; align-items: center; justify-content: center;
-    position: relative; overflow: hidden;
-  }
-  .motion-rings {
-    position: absolute; inset: 0;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .ring {
-    position: absolute;
-    border: 1px solid var(--gold-border);
-    border-radius: 50%;
-    animation: ringPulse 3s ease-in-out infinite;
-  }
-  .ring:nth-child(1) { width: 60px; height: 60px; animation-delay: 0s; }
-  .ring:nth-child(2) { width: 100px; height: 100px; animation-delay: 0.4s; border-color: var(--emerald-border); }
-  .ring:nth-child(3) { width: 150px; height: 150px; animation-delay: 0.8s; border-color: rgba(201,168,76,0.1); }
-  @keyframes ringPulse { 0%,100%{transform:scale(1); opacity:0.6} 50%{transform:scale(1.08); opacity:1} }
-  .play-btn {
-    width: 56px; height: 56px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--gold), var(--gold-light));
-    display: flex; align-items: center; justify-content: center;
-    z-index: 1;
-    position: relative;
-  }
-  .play-btn::before {
-    content: '';
-    width: 0; height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 16px solid var(--bg);
-    margin-left: 3px;
-  }
-  .motion-content h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px; font-weight: 700;
-    color: var(--text); margin-bottom: 16px;
-    line-height: 1.25;
-  }
-  .motion-content p {
-    font-size: 14px; color: var(--text-muted); line-height: 1.75;
-    margin-bottom: 24px;
-  }
-  .app-badges { display: flex; gap: 10px; flex-wrap: wrap; }
-  .app-badge {
-    padding: 8px 16px; border-radius: 8px;
-    font-size: 12px; font-weight: 700;
-    letter-spacing: 1px;
-  }
-  .app-badge.ae { background: rgba(159,0,228,0.15); color: #CF96FF; border: 1px solid rgba(159,0,228,0.25); }
-  .app-badge.pr { background: rgba(0,102,228,0.15); color: #74B3FF; border: 1px solid rgba(0,102,228,0.25); }
-  <section id="motion-graphics" style="padding:80px 20px;background:#0f1115;">
-  <div style="max-width:1200px;margin:auto;">
+  <!-- SECTION 5: MOTION GRAPHICS -->
+<section id="motion-graphics">
+  <div class="section-container">
 
-    <div style="text-align:center;margin-bottom:50px;">
-      <h2 style="font-size:42px;color:#d4af37;margin-bottom:10px;">
-        Motion Graphics & Video Portfolio
-      </h2>
+    <div class="section-label reveal">Motion Graphics</div>
 
-      <p style="color:#b8b8b8;font-size:18px;max-width:700px;margin:auto;">
-        A collection of creative video concepts, AI-assisted commercials,
-        product advertisements and visual storytelling experiments.
-      </p>
-    </div>
+    <h2 class="section-title reveal reveal-delay-1">
+      Video Portfolio & Creative Showcase
+    </h2>
+
+    <p class="section-desc reveal reveal-delay-2">
+      A collection of motion graphics, AI-generated advertisements,
+      product commercials, and creative video concepts that showcase
+      my interest in video editing, storytelling, and visual communication.
+    </p>
 
     <div style="
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-      gap:30px;
+      gap:24px;
+      margin-top:40px;
     ">
 
-      <div style="background:#1a1f27;border-radius:20px;overflow:hidden;">
+      <!-- Video 1 -->
+      <div class="glass-card" style="overflow:hidden;">
         <video controls style="width:100%;display:block;">
           <source src="videos/Youthful.mp4" type="video/mp4">
         </video>
 
         <div style="padding:20px;">
-          <h3 style="color:#fff;">Beauty Commercial</h3>
-          <p style="color:#b8b8b8;">
-            Product advertising concept focusing on premium presentation,
-            lighting and storytelling.
+          <h3 style="margin-bottom:10px;color:var(--gold-light);">
+            Beauty Commercial
+          </h3>
+
+          <p style="color:var(--text-muted);line-height:1.7;">
+            Product advertising concept focused on premium presentation,
+            cinematic visuals and brand storytelling.
           </p>
         </div>
       </div>
 
-      <div style="background:#1a1f27;border-radius:20px;overflow:hidden;">
+      <!-- Video 2 -->
+      <div class="glass-card" style="overflow:hidden;">
         <video controls style="width:100%;display:block;">
           <source src="videos/Nivea Soft.mp4" type="video/mp4">
         </video>
 
         <div style="padding:20px;">
-          <h3 style="color:#fff;">Skincare Advertisement</h3>
-          <p style="color:#b8b8b8;">
-            Social media commercial with product-focused visual direction.
+          <h3 style="margin-bottom:10px;color:var(--gold-light);">
+            Skincare Advertisement
+          </h3>
+
+          <p style="color:var(--text-muted);line-height:1.7;">
+            Product-focused commercial demonstrating visual presentation
+            and digital advertising concepts.
           </p>
         </div>
       </div>
 
-      <div style="background:#1a1f27;border-radius:20px;overflow:hidden;">
+      <!-- Video 3 -->
+      <div class="glass-card" style="overflow:hidden;">
         <video controls style="width:100%;display:block;">
           <source src="videos/Preety Women.mp4" type="video/mp4">
         </video>
 
         <div style="padding:20px;">
-          <h3 style="color:#fff;">Lifestyle Visual</h3>
-          <p style="color:#b8b8b8;">
-            Cinematic concept emphasizing luxury aesthetics and engagement.
+          <h3 style="margin-bottom:10px;color:var(--gold-light);">
+            Lifestyle Visual
+          </h3>
+
+          <p style="color:var(--text-muted);line-height:1.7;">
+            Cinematic visual experiment exploring luxury aesthetics,
+            composition and audience engagement.
           </p>
         </div>
       </div>
 
-      <div style="background:#1a1f27;border-radius:20px;overflow:hidden;">
+      <!-- Video 4 -->
+      <div class="glass-card" style="overflow:hidden;">
         <video controls style="width:100%;display:block;">
           <source src="videos/Preety Women 2.mp4" type="video/mp4">
         </video>
 
         <div style="padding:20px;">
-          <h3 style="color:#fff;">Fashion Concept</h3>
-          <p style="color:#b8b8b8;">
-            Character-driven visual storytelling and creative direction.
+          <h3 style="margin-bottom:10px;color:var(--gold-light);">
+            Fashion Concept
+          </h3>
+
+          <p style="color:var(--text-muted);line-height:1.7;">
+            Character-driven visual storytelling showcasing creative
+            direction and modern advertising style.
           </p>
         </div>
       </div>
 
-      <div style="background:#1a1f27;border-radius:20px;overflow:hidden;">
+      <!-- Video 5 -->
+      <div class="glass-card" style="overflow:hidden;">
         <video controls style="width:100%;display:block;">
           <source src="videos/Water Girl.mp4" type="video/mp4">
         </video>
 
         <div style="padding:20px;">
-          <h3 style="color:#fff;">Product Review Concept</h3>
-          <p style="color:#b8b8b8;">
-            Commercial content demonstrating editing and motion design skills.
+          <h3 style="margin-bottom:10px;color:var(--gold-light);">
+            Product Review Concept
+          </h3>
+
+          <p style="color:var(--text-muted);line-height:1.7;">
+            Commercial-style content highlighting editing techniques,
+            motion design and product communication.
           </p>
         </div>
       </div>
